@@ -1,0 +1,49 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
+    padding: 40px 0 ;
+}
+
+.title {
+    margin: 0;
+    padding: 0;
+    font-size: 22px;
+}
+
+.titleLink {
+    color: #333333;
+}
+
+.description {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    color: #999999;
+    margin-top: 10px;
+}
+
+.themeButton {
+    width: 24px;
+    height: 24px;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.themeButton:hover {
+    opacity: 0.6;
+}
+
+@media only screen and (max-width: 375px) {
+    .header {
+        width: 90%;
+    }
+}

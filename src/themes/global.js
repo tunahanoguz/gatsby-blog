@@ -1,3 +1,6 @@
+import { createGlobalStyle } from "styled-components"
+
+export const GlobalStyles = createGlobalStyle`
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap');
 
 html {
@@ -7,6 +10,8 @@ html {
 }
 body {
   margin: 0;
+  background: ${({ theme }) => theme.body};
+  color: ${({ theme }) => theme.text};
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Inter', sans-serif;
@@ -624,3 +629,5 @@ pre tt:after {
     font-size: 100%;
   }
 }
+
+`
