@@ -1,6 +1,6 @@
 ---
 path: /first-post
-title: Learn More About Epic React
+title: The Last Post on the Blog
 featuredImage: ../../images/gatsby-astronaut.png
 ---
 
