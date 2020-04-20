@@ -1,4 +1,5 @@
 import styled from "styled-components"
+import { Link } from "gatsby"
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -14,6 +15,16 @@ export const StyledHeader = styled.header`
   }
 `;
 
+export const Title = styled.h1`
+  margin: 0;
+  padding: 0;
+  font-size: 22px;
+`;
+
+export const TitleLink = styled(Link)`
+  color: ${({ theme }) => theme.text};
+`;
+
 export const Description = styled.span`
   display: block;
   font-size: 14px;
@@ -21,4 +32,19 @@ export const Description = styled.span`
   font-style: italic;
   color: ${({ theme }) => theme.siteDescription};
   margin-top: 10px;
+`;
+
+export const ThemeButton = styled.button`
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+  :hover {
+    opacity: 0.6;
+  }
 `;

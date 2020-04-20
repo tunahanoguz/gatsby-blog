@@ -1,8 +1,6 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
+import React from "react"
 import PropTypes from "prop-types"
-import styles from "./header.module.css"
-import { StyledHeader, Description } from "./styles"
+import { StyledHeader, Title, TitleLink, Description, ThemeButton } from "./styles"
 
 import Moon from "../../assets/icons/moon.svg"
 import Sun from "../../assets/icons/sun.svg"
@@ -12,13 +10,13 @@ const Header = ({ siteTitle, theme, setTheme }) => {
 
   return (
     <StyledHeader>
-      <h1 className={styles.title}>
-        <Link to="/" className={styles.titleLink}>
+      <Title className={styles.title}>
+        <TitleLink to="/" className={styles.titleLink}>
           {siteTitle}
-        </Link>
+        </TitleLink>
         <Description>Computer Engineer</Description>
-      </h1>
-      <button
+      </Title>
+      <ThemeButton
         className={styles.themeButton}
         onClick={() => setTheme(isLightTheme ? "darkTheme" : "lightTheme")}
       >
@@ -27,7 +25,7 @@ const Header = ({ siteTitle, theme, setTheme }) => {
         ) : (
           <Sun color="white" style={{ fill: "white" }} />
         )}
-      </button>
+      </ThemeButton>
     </StyledHeader>
   )
 }
