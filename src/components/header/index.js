@@ -1,7 +1,16 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { StyledHeader, Title, TitleLink, Description, ThemeButton } from "./styles"
+import {
+  StyledHeader,
+  Logo,
+  LogoCircle,
+  Title,
+  TitleLink,
+  Description,
+  ThemeButton,
+} from "./styles"
 
+import Code from "../../assets/icons/code.svg"
 import Moon from "../../assets/icons/moon.svg"
 import Sun from "../../assets/icons/sun.svg"
 
@@ -10,14 +19,17 @@ const Header = ({ siteTitle, theme, setTheme }) => {
 
   return (
     <StyledHeader>
-      <Title className={styles.title}>
-        <TitleLink to="/" className={styles.titleLink}>
-          {siteTitle}
-        </TitleLink>
-        <Description>Computer Engineer</Description>
-      </Title>
+      <Logo>
+        <LogoCircle>
+          <Code />
+        </LogoCircle>
+        <Title>
+          <TitleLink to="/">{siteTitle}</TitleLink>
+          <Description>Computer Engineer</Description>
+        </Title>
+      </Logo>
+
       <ThemeButton
-        className={styles.themeButton}
         onClick={() => setTheme(isLightTheme ? "darkTheme" : "lightTheme")}
       >
         {isLightTheme ? (

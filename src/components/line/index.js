@@ -1,10 +1,9 @@
 import React from "react"
-import styles from "./line.module.css";
+import styled from "styled-components"
 
-function Line() {
-  return (
-    <div className={styles.line}/>
-  );
-}
+const Line = styled.div`
+  height: 10px;
+  background-color: ${({theme}) => theme.topLine};
+`;
 
 export default Line;
